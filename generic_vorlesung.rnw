@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\renewcommand{\familydefault}{\sfdefault}
+\geometry{a4paper, total={210mm,297mm}, left=20mm, right=20mm, top=15mm, tmargin=39mm, headheight=70mm, bottom=20mm}
+\pagestyle{fancy}
+\fancyhead{} 
+\fancyhead[RO,RE]{\includegraphics{img/pfh_logo3.png}}
+\fancyfoot{} 
+\fancyfoot[RO,RE]{\thepage}
+\thispagestyle{fancy}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
+\title{Evaluation der Vorlesungen\\ 
+\Sexpr{vorlesung}
+}
+\date{\Sexpr{datum}
+}
+\author{}
+\maketitle
+\renewcommand*\contentsname{Vorlesungen}
+\setcounter{tocdepth}{1}
+\tableofcontents
+<<run-all, include=FALSE>>=
+# Dateiname
+data <-
+      read.csv(
+        inFile$datapath, quote = "'\"", na.strings = c("", "\"\""), stringsAsFactors =
+          FALSE, encoding = "UTF-8"
+      )
+source("generic_syntax_file.r", encoding = "UTF-8")
+
+# select complete answers only
+data <- data[!is.na(data$submitdate),]
+fragen <- 25 # questions per module
+offset <- 9 # col number of first module question
+spalten <- ncol(data)
+module <- (spalten - offset) / fragen
+
+library(knitr)
+out = NULL
+# analysis total
+# out = c(out, knit_child('modulanalyse.rnw'))
+
+# analysis per module
+for (i in 1:module) {
+  start <- ((i-1)*fragen)+offset
+  modulname <- attributes(data)$variable.labels[start]
+  studiengangsdaten <- data[,start:(start+fragen-1)]
+  colnames(studiengangsdaten) <- c("k1","k1a_SQ001","k1a_SQ002", "k1a_SQ003", "k1a_SQ004", "k1a_SQ005", "k1b_SQ001", "k1b_SQ002", "k1b_SQ003", "k1b_SQ004", "k1b_SQ005", "k1b_SQ006", "k1b_SQ007", "k1b_SQ008", "k1b_SQ009", "k1c_SQ001", "k1c_SQ002", "k1c_SQ003", "k1c_SQ004", "k1d_SQ001", "k1d_SQ002", "k1e_SQ001", "k1f", "k1fa", "k1fb")
+  for (c in 1:25){
+    factor(studiengangsdaten[,c], levels = levels(data[,offset+c-1]))
+  }
+
+  out = c(out, knit_child('modulanalyse.rnw'))
+}
+@
+
+\Sexpr{paste(out, collapse = '\n ')}
+\end{document}

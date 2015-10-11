@@ -1,0 +1,219 @@
+\pagebreak
+
+\section{\Sexpr{modulname}}
+
+Dozent: \Sexpr{dozent}
+
+\noindent
+Anzahl Rückmeldungen: \Sexpr{nrow(studiengangsdaten)}
+
+\subsection{Lehr-/Lerninhalte der Vorlesung}
+
+"Bitte beurteilen Sie die folgenden inhaltlichen Aspekte der Vorlesung."
+
+<<echo=FALSE, fig.width=7.8, fig.height=6.2>>=
+suppressPackageStartupMessages(require(ggplot2))
+
+mybreaks <- NULL
+anzahl <- nrow(studiengangsdaten) 
+if (anzahl<5){
+  mybreaks <- seq(from=0, to=anzahl, by=1)
+}else if(anzahl<20){
+  mybreaks <- seq(from=0, to=anzahl, by=2)
+}else if(anzahl<60){
+  mybreaks <- seq(from=0, to=anzahl, by=5)
+}else if(anzahl<100){
+  mybreaks <- seq(from=0, to=anzahl, by=10)
+}else {
+  mybreaks <- seq(from=0, to=anzahl, by=20)
+}
+
+collapseString <- "\\\\ \\rule{2cm}{0.4pt}\\\\  "
+
+
+long <- reshape(studiengangsdaten, dir = "long", varying = 2:6, sep="_", drop = 7:25)
+
+levels(long$k1a) <- gsub("sehr ", "sehr\n ", c(levels(long$k1a)))
+levels(long$k1a) <- gsub("für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen", "für diese\n Veranstaltung\n irrelevant\n bzw. kann ich\n (derzeit)\n nicht\n beurteilen", c(levels(long$k1a)), fixed=TRUE)
+long$time <- factor(long$time, levels=c("SQ001","SQ002","SQ003","SQ004","SQ005"),labels=c("Vermittlung von Fachwissen", "Vermittlung von Methoden wissenschaftlichen Arbeitens", "Schulung meines wissenschaftlich-fachlichen Denkens", "Anregung zu kritischer Reflexion", "Angemessener Praxisbezug"
+)) 
+scale7 <- c("#e6e8f1", "#e6e8f1", "#e6e8f1", "#e6e8f1", "#e6e8f1", "#e6e8f1", "#e6e8f1", "red")
+
+ggplot(long,aes(x=k1a)) +
+  scale_x_discrete(drop=FALSE) +
+  scale_y_continuous(breaks=mybreaks) +
+  scale_fill_discrete(drop=FALSE) + 
+  geom_bar(stat="bin", fill="#66B2FF", colour="black") +
+  theme(
+    axis.text.x = element_text(angle = 0, hjust = 0.5, vjust=0.5, size=9, colour = "black"), 
+    axis.text.y = element_text(size=7, colour = "black"),
+    axis.title=element_text(size=9)
+    ) +
+  ylab("Häufigkeiten je Antwort") + 
+  xlab("") +
+  facet_wrap( ~ time, ncol=1)
+
+@
+
+\pagebreak
+\subsection{Vermittlung der Lern-/Lehrinhalte}
+
+"Bitte beurteilen Sie die folgenden Aspekte der Vermittlung der Lehrinhalte in der Vorlesung."
+
+<<echo=FALSE, fig.width=7.8, fig.height=10>>=
+
+long <- reshape(studiengangsdaten, dir = "long", varying = 7:15, sep="_", drop = c(1:6, 16:25))
+
+levels(long$k1b) <- gsub("sehr ", "sehr\n ", c(levels(long$k1b)))
+levels(long$k1b) <- gsub("für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen", "für diese\n Veranstaltung\n irrelevant\n bzw. kann ich\n (derzeit)\n nicht\n beurteilen", c(levels(long$k1b)), fixed=TRUE)
+long$time <- factor(long$time, levels=c("SQ001","SQ002","SQ003","SQ004","SQ005","SQ006","SQ007","SQ008","SQ009"),labels=c("Konzeption und Aufbau der Vorlesung", "Klarheit der Lernziele (zu erwerbendes bzw. vertiefendes Wissen)", "Didaktische Fähigkeiten der/des Lehrenden zur Vermittlung und Veranschaulichung der Inhalte", "Anregende und lebendige Gestaltung der Vorlesung", "Zur Verfügung gestellte Materialien", "Angemessener Einsatz von Medien", "Möglichkeiten zur aktiven Beteiligung und Mitarbeit in der Vorlesung\n (entsprechend der Anzahl der Teilnehmer/innen in der Veranstaltung)", "Bereitschaft der/des Lehrenden, Vorschläge, Rückmeldungen und Kritik offen aufzunehmen", "Arbeitsatmosphäre in der Vorlesung")) 
+
+ggplot(long,aes(x=k1b)) +
+  scale_x_discrete(drop=FALSE) +
+  scale_y_continuous(breaks=mybreaks) +
+  scale_fill_discrete(drop=FALSE) + 
+  geom_bar(stat="bin", fill="#66B2FF", colour="black") +
+  theme(
+    axis.text.x = element_text(angle = 0, hjust = 0.5, vjust=0.5, size=9, colour = "black"), 
+    axis.text.y = element_text(size=7, colour = "black"),
+    axis.title=element_text(size=9)
+    ) +
+  ylab("Häufigkeiten je Antwort") + 
+  xlab("") +
+  facet_wrap( ~ time, ncol=1)
+
+@
+
+
+<<echo=FALSE, fig.width=7.8, fig.height=5.5>>=
+
+long <- reshape(studiengangsdaten, dir = "long", varying = 16:19, sep="_", drop = c(1:15, 20:25))
+
+levels(long$k1c) <- gsub("zu ", "zu\n ", c(levels(long$k1c)))
+levels(long$k1c) <- gsub("für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen", "für diese\n Veranstaltung\n irrelevant\n bzw. kann ich\n (derzeit)\n nicht\n beurteilen", c(levels(long$k1c)), fixed=TRUE)
+long$time <- factor(long$time, levels=c("SQ001","SQ002","SQ003","SQ004"),labels=c("Erwartungen der/des Lehrenden an bereits vorhandenes Wissen und Können", "Tempo der Arbeit in der Vorlesung", "Arbeitsaufwand für Vor- und Nachbereitung der Vorlesung", "Arbeitsaufwand für die Vorlesung insgesamt (Kontaktzeit + Selbststudium)\n in Relation zu kalkuliertem zeitlichen Aufwand laut Curriculum")) 
+
+ggplot(long,aes(x=k1c)) +
+  scale_x_discrete(drop=FALSE) +
+  scale_y_continuous(breaks=mybreaks) +
+  scale_fill_discrete(drop=FALSE) + 
+  geom_bar(stat="bin", fill="#66B2FF", colour="black") +
+  theme(
+    axis.text.x = element_text(angle = 0, hjust = 0.5, vjust=0.5, size=9, colour = "black"), 
+    axis.text.y = element_text(size=7, colour = "black"),
+    axis.title=element_text(size=9)
+    ) +
+  ylab("Häufigkeiten je Antwort") + 
+  xlab("") +
+  facet_wrap( ~ time, ncol=1)
+
+@
+
+
+\subsection{Organisation und Rahmenbedingungen}
+
+"Bitte beurteilen Sie nun Rahmenbedingungen und Organisation der Vorlesung."
+
+<<echo=FALSE, fig.width=7.8, fig.height=3.3>>=
+
+long <- reshape(studiengangsdaten, dir = "long", varying = 20:21, sep="_", drop = c(1:19, 22:25))
+
+levels(long$k1d) <- gsub("sehr ", "sehr\n ", c(levels(long$k1d)))
+levels(long$k1d) <- gsub("für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen", "für diese\n Veranstaltung\n irrelevant\n bzw. kann ich\n (derzeit)\n nicht\n beurteilen", c(levels(long$k1d)), fixed=TRUE)
+long$time <- factor(long$time, levels=c("SQ001","SQ002"),labels=c("Größe und Zustand des Raumes bzw. der Räume für die Vorlesung", "Angemessenheit und Funktionalität der technischen Ausstattung")) 
+
+ggplot(long,aes(x=k1d)) +
+  scale_x_discrete(drop=FALSE) +
+  scale_y_continuous(breaks=mybreaks) +
+  scale_fill_discrete(drop=FALSE) + 
+  geom_bar(stat="bin", fill="#66B2FF", colour="black") +
+  theme(
+    axis.text.x = element_text(angle = 0, hjust = 0.5, vjust=0.5, size=9, colour = "black"), 
+    axis.text.y = element_text(size=7, colour = "black"),
+    axis.title=element_text(size=9)
+    ) +
+  ylab("Häufigkeiten je Antwort") + 
+  xlab("") +
+  facet_wrap( ~ time, ncol=1)
+
+@
+
+\pagebreak
+
+\subsection{Gesamteinschätzung der Vorlesung}
+
+"Welche Note geben Sie der Vorlesung insgesamt?"
+
+<<echo=FALSE, fig.width=5.5, fig.height=1.3>>=
+noten_numeric <- studiengangsdaten$k1e_SQ001
+noten_numeric <- as.numeric(levels(noten_numeric)[noten_numeric])
+schnitt <- round(mean(noten_numeric, na.rm = TRUE), digits = 2)
+streuung <- round(sd(noten_numeric, na.rm = TRUE), digits = 2)
+
+ggplot(studiengangsdaten,aes(x=k1e_SQ001)) +
+  scale_x_discrete(drop=FALSE) +
+  scale_y_continuous(breaks=mybreaks) +
+  scale_fill_discrete(drop=FALSE) + 
+  geom_bar(stat="bin", fill="#66B2FF", colour="black") +
+  theme(
+    axis.text.x = element_text(angle = 0, hjust = 0.5, vjust=0.5, size=9, colour = "black"), 
+    axis.text.y = element_text(size=7, colour = "black"),
+    axis.title=element_text(size=9)
+    ) +
+  ylab("Häuf. je Ant.") + 
+  xlab("")
+  
+@
+
+Durchschnittsnote: \Sexpr{schnitt} (Standardabweichung: \Sexpr{streuung})
+
+\subsubsection{Was hat Ihnen gut gefallen?}
+
+<<include=FALSE>>=
+out2 = NULL
+
+kommentare <- NULL
+kommentare <- studiengangsdaten$k1fa[!is.na(studiengangsdaten$k1fa)]
+
+if (length(kommentare)>0){
+  # remove superfluous line feeds on start and end
+  kommentare <- gsub("^\n+", "", kommentare)
+  kommentare <- gsub("\n+$", "", kommentare)
+  # replace % sign
+  kommentare <- gsub("%", "\\%", kommentare, fixed=TRUE)
+  kommentare <- gsub("&", "\\&", kommentare, fixed=TRUE)
+  kommentare <- gsub("\n", "\\\\\\\\ ", kommentare)
+  kommentare <- gsub('\"', "''", kommentare, fixed=TRUE)
+    out2 <- c(paste(kommentare, collapse=collapseString))
+}else{
+  out2 <- c("keine Angaben")
+}
+@
+
+\Sexpr{paste(out2, collapse = '\\\\ ')}
+
+\subsubsection{Was können wir besser machen?}
+
+<<include=FALSE>>=
+out2 = NULL
+
+kommentare <- NULL
+kommentare <- studiengangsdaten$k1fb[!is.na(studiengangsdaten$k1fb)]
+
+if (length(kommentare)>0){
+  # remove superfluous line feeds on start and end
+  kommentare <- gsub("^\n+", "", kommentare)
+  kommentare <- gsub("\n+$", "", kommentare)
+  # replace % sign
+  kommentare <- gsub("%", "\\%", kommentare, fixed=TRUE)
+  kommentare <- gsub("&", "\\&", kommentare, fixed=TRUE)
+  kommentare <- gsub("\n", "\\\\\\\\ ", kommentare)
+  kommentare <- gsub('\"', "''", kommentare, fixed=TRUE)
+  
+    out2 <- c(paste(kommentare, collapse=collapseString))
+}else{
+  out2 <- c("keine Angaben")
+}
+@
+
+\Sexpr{paste(out2, collapse = '\\\\ ')}

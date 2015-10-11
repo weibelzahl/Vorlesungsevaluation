@@ -1,0 +1,119 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\renewcommand{\familydefault}{\sfdefault}
+\geometry{a4paper, total={210mm,297mm}, left=20mm, right=20mm, top=15mm, tmargin=39mm, headheight=70mm, bottom=20mm}
+\pagestyle{fancy}
+\fancyhead{} 
+\fancyhead[RO,RE]{\includegraphics{img/pfh_logo3.png}}
+\fancyfoot{} 
+\fancyfoot[RO,RE]{\thepage}
+\thispagestyle{fancy}
+\renewcommand{\familydefault}{\sfdefault}
+
+<<include=FALSE>>=
+modulnamen <- data.frame(read.csv("mn.csv", sep=";", encoding = "UTF-8"))
+modulnamen$Studiengang <- factor(modulnamen$Studiengang)
+
+        studiengaenge <- list(BScGM2 = "Campusstudiengang\\\\ B.Sc. General Management\\\\2. Semester",
+                              BScGM4 = "Campusstudiengang\\\\ B.Sc. General Management\\\\4. Semester",
+                              MAGM = "Campusstudiengang\\\\ M.Sc. General Management")
+        
+        studiengang_id <- unlist(strsplit(studiengang_modul_id, "_"))[1]
+        studiengang <- studiengaenge[[studiengang_id]]
+
+        offsets <- list(BScGM2 = 9, BScGM4 = 9, MAGM = 10)
+
+
+        dozentenwahl <- FALSE
+        dozent <- ""
+        
+        
+@
+
+
+
+\begin{document}
+\title{Evaluation der Vorlesungen\\ 
+\Sexpr{studiengang}
+}
+\date{
+\Sexpr{datum}
+}
+
+\author{}
+\maketitle
+\renewcommand*\contentsname{Vorlesungen}
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+<<run-all, include=FALSE>>=
+# Dateiname
+data <-
+  read.csv(
+    inFile$datapath, quote = "'\"", na.strings = c("", "\"\""), stringsAsFactors =
+      FALSE, encoding = "UTF-8"
+  )
+
+source("generic_syntax_file.r", encoding = "UTF-8", local = TRUE)
+
+# select complete answers only
+data <- data[!is.na(data$submitdate),]
+fragen <- 25 # questions per module
+offset <- offsets[[studiengang_id]] # col number of first module question
+spalten <- ncol(data)
+module <- (spalten - offset + 1) / fragen
+
+library(knitr)
+out = NULL
+
+# if "Alle" was selected, analyse all modules
+alle_dozenten <- length(unlist(strsplit(studiengang_modul_id, "_"))) == 1
+#message(paste("Hi:", alle_dozenten))  
+#print(paste("Hi:", alle_dozenten))  
+# analysis per module
+  for (i in 1:module) {
+    #for (i in 1:3) {
+    
+    # only execute knitting if "all" or if module matches   
+    if(alle_dozenten || ((unlist(strsplit(studiengang_modul_id, "_")))[2] == i)){  
+      # special case MAGM: Vertiefungswahl
+      if(i>6 && studiengang_id == "MAGM"){
+        offset <- 16
+      }
+      start <- ((i-1)*fragen)+offset
+      modulname <- modulnamen$Veranstaltung[modulnamen$Studiengang==studiengang_id][i]
+      dozent <- modulnamen$Dozent[modulnamen$Studiengang==studiengang_id][i]
+      dozentenwahl <- modulnamen$Dozentenwahl[modulnamen$Studiengang==studiengang_id][i]
+      
+      source("label_items.r", encoding = "UTF-8", local = TRUE)
+      
+      studiengangsdaten <- data[,start:(start+fragen-1)]
+      if((dozentenwahl == 1) && (!alle_dozenten)){
+        dozent_id <- as.integer((unlist(strsplit(studiengang_modul_id, "_")))[3])
+        dozent_factor <- paste("A", dozent_id, sep="")
+        colnames(studiengangsdaten) <- c("k1","k1a_SQ001","k1a_SQ002", "k1a_SQ003", "k1a_SQ004", "k1a_SQ005", "k1b_SQ001", "k1b_SQ002", "k1b_SQ003", "k1b_SQ004", "k1b_SQ005", "k1b_SQ006", "k1b_SQ007", "k1b_SQ008", "k1b_SQ009", "k1c_SQ001", "k1c_SQ002", "k1c_SQ003", "k1c_SQ004", "k1d_SQ001", "k1d_SQ002", "k1e_SQ001", "k1f", "k1fa", "k1fb")
+
+        studiengangsdaten <- studiengangsdaten[studiengangsdaten$k1 == dozent_factor,]
+        dozent <- (unlist(strsplit(as.character(dozent), ", ")))[dozent_id]
+      }
+      studiengangsdaten <- studiengangsdaten[!is.na(studiengangsdaten[,2]),]
+      if(nrow(studiengangsdaten)==0){
+        out = c(out, knit_child('keineAntworten.rnw'))
+      }else{
+        colnames(studiengangsdaten) <- c("k1","k1a_SQ001","k1a_SQ002", "k1a_SQ003", "k1a_SQ004", "k1a_SQ005", "k1b_SQ001", "k1b_SQ002", "k1b_SQ003", "k1b_SQ004", "k1b_SQ005", "k1b_SQ006", "k1b_SQ007", "k1b_SQ008", "k1b_SQ009", "k1c_SQ001", "k1c_SQ002", "k1c_SQ003", "k1c_SQ004", "k1d_SQ001", "k1d_SQ002", "k1e_SQ001", "k1f", "k1fa", "k1fb")
+        for (c in 1:23){
+          factor(studiengangsdaten[,c], levels = levels(data[,offset+c-1]))
+        }
+        
+        out = c(out, knit_child('modulanalyse.rnw'))
+    }
+  }
+}
+  
+@
+
+\Sexpr{paste(out, collapse = '\n ')}
+\end{document}

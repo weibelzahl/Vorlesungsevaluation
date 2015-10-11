@@ -1,0 +1,11 @@
+\pagebreak
+
+\section{\Sexpr{modulname}}
+
+Dozent: \Sexpr{dozent}
+
+\noindent
+Anzahl Rückmeldungen: \Sexpr{nrow(studiengangsdaten)}
+
+\noindent
+Für diese Veranstaltung liegen keine Antworten vor.
