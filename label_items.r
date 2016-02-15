@@ -72,22 +72,38 @@ names(data)[k+13] <- "k1b_SQ009"
 # LimeSurvey Field type: A
 data[, k+14] <- as.character(data[, k+14])
 attributes(data)$variable.labels[k+14] <- "[Erwartungen der/des Lehrenden an bereits vorhandenes Wissen und Können] Bitte beurteilen Sie die folgenden Aspekte der Vermittlung der Lehrinhalte in der Vorlesung:"
-data[, k+14] <- factor(data[, k+14], levels=c("A1","A7","A6","A5","A4","A3","A2","A8"),labels=c("zu hoch", "2", "3", "4", "5", "6", "zu niedrig", "für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen"))
+if(nrow(subset(itemlevels, Studiengang==studiengang_id & Modul==i & Item==15, select = 1))>0){
+  data[, k+14] <- factor(data[, k+14], levels=c("A1","A2","A6","A5","A4","A3","A7","A8"),labels=c("zu hoch", "2", "3", "4", "5", "6", "zu niedrig", "für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen"))
+}else{
+  data[, k+14] <- factor(data[, k+14], levels=c("A1","A7","A6","A5","A4","A3","A2","A8"),labels=c("zu hoch", "2", "3", "4", "5", "6", "zu niedrig", "für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen"))
+}
 names(data)[k+14] <- "k1c_SQ001"
 # LimeSurvey Field type: A
 data[, k+15] <- as.character(data[, k+15])
 attributes(data)$variable.labels[k+15] <- "[Tempo der Arbeit in der Vorlesung] Bitte beurteilen Sie die folgenden Aspekte der Vermittlung der Lehrinhalte in der Vorlesung:"
-data[, k+15] <- factor(data[, k+15], levels=c("A1","A7","A6","A5","A4","A3","A2","A8"),labels=c("zu hoch", "2", "3", "4", "5", "6", "zu niedrig", "für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen"))
+if(nrow(subset(itemlevels, Studiengang==studiengang_id & Modul==i & Item==16, select = 1))>0){
+  data[, k+15] <- factor(data[, k+15], levels=c("A1","A2","A6","A5","A4","A3","A7","A8"),labels=c("zu hoch", "2", "3", "4", "5", "6", "zu niedrig", "für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen"))
+}else{
+  data[, k+15] <- factor(data[, k+15], levels=c("A1","A7","A6","A5","A4","A3","A2","A8"),labels=c("zu hoch", "2", "3", "4", "5", "6", "zu niedrig", "für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen"))
+}
 names(data)[k+15] <- "k1c_SQ002"
 # LimeSurvey Field type: A
 data[, k+16] <- as.character(data[, k+16])
 attributes(data)$variable.labels[k+16] <- "[Arbeitsaufwand für Vor- und Nachbereitung der Vorlesung] Bitte beurteilen Sie die folgenden Aspekte der Vermittlung der Lehrinhalte in der Vorlesung:"
-data[, k+16] <- factor(data[, k+16], levels=c("A1","A7","A6","A5","A4","A3","A2","A8"),labels=c("zu hoch", "2", "3", "4", "5", "6", "zu niedrig", "für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen"))
+if(nrow(subset(itemlevels, Studiengang==studiengang_id & Modul==i & Item==17, select = 1))>0){
+  data[, k+16] <- factor(data[, k+16], levels=c("A1","A2","A6","A5","A4","A3","A7","A8"),labels=c("zu hoch", "2", "3", "4", "5", "6", "zu niedrig", "für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen"))
+}else{
+  data[, k+16] <- factor(data[, k+16], levels=c("A1","A7","A6","A5","A4","A3","A2","A8"),labels=c("zu hoch", "2", "3", "4", "5", "6", "zu niedrig", "für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen"))
+}
 names(data)[k+16] <- "k1c_SQ003"
 # LimeSurvey Field type: A
 data[, k+17] <- as.character(data[, k+17])
 attributes(data)$variable.labels[k+17] <- "[Arbeitsaufwand für die Vorlesung insgesamt]"
-data[, k+17] <- factor(data[, k+17], levels=c("A1","A7","A6","A5","A4","A3","A2","A8"),labels=c("zu hoch", "2", "3", "4", "5", "6", "zu niedrig", "für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen"))
+if(nrow(subset(itemlevels, Studiengang==studiengang_id & Modul==i & Item==18, select = 1))>0){
+  data[, k+17] <- factor(data[, k+17], levels=c("A1","A2","A6","A5","A4","A3","A7","A8"),labels=c("zu hoch", "2", "3", "4", "5", "6", "zu niedrig", "für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen"))
+}else{
+  data[, k+17] <- factor(data[, k+17], levels=c("A1","A7","A6","A5","A4","A3","A2","A8"),labels=c("zu hoch", "2", "3", "4", "5", "6", "zu niedrig", "für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen"))
+}
 names(data)[k+17] <- "k1c_SQ004"
 # LimeSurvey Field type: A
 data[, k+18] <- as.character(data[, k+18])
@@ -102,7 +118,13 @@ names(data)[k+19] <- "k1d_SQ002"
 # LimeSurvey Field type: A
 data[, k+20] <- as.character(data[, k+20])
 attributes(data)$variable.labels[k+20] <- "[Welche Note geben Sie der Vorlesung insgesamt? ] Gesamteinschätzung der Vorlesung \"Wirtschaftsrecht\""
-data[, k+20] <- factor(data[, k+20], levels=c("A1","A6","A5","A4","A3","A2"),labels=c("1", "2", "3", "4", "5", "6"))
+mydebugger <- paste("item labels: id:", studiengang_id, ", i:", i, ", k:", k)
+if(nrow(subset(itemlevels, Studiengang==studiengang_id & Modul==i & Item==21, select = 1))>0){
+  mydebugger <- paste(mydebugger, ", A1-A6")
+  data[, k+20] <- factor(data[, k+20], levels=c("A1","A2","A3","A4","A5","A6"),labels=c("1", "2", "3", "4", "5", "6"))
+}else{
+  data[, k+20] <- factor(data[, k+20], levels=c("A1","A6","A5","A4","A3","A2"),labels=c("1", "2", "3", "4", "5", "6"))
+}
 names(data)[k+20] <- "k1e_SQ001"
 # LimeSurvey Field type: A
 data[, k+21] <- as.character(data[, k+21])

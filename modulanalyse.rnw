@@ -43,7 +43,7 @@ ggplot(long,aes(x=k1a)) +
   scale_x_discrete(drop=FALSE) +
   scale_y_continuous(breaks=mybreaks) +
   scale_fill_discrete(drop=FALSE) + 
-  geom_bar(stat="bin", fill="#66B2FF", colour="black") +
+  geom_bar(stat="count", fill="#66B2FF", colour="black") +
   theme(
     axis.text.x = element_text(angle = 0, hjust = 0.5, vjust=0.5, size=9, colour = "black"), 
     axis.text.y = element_text(size=7, colour = "black"),
@@ -72,7 +72,7 @@ ggplot(long,aes(x=k1b)) +
   scale_x_discrete(drop=FALSE) +
   scale_y_continuous(breaks=mybreaks) +
   scale_fill_discrete(drop=FALSE) + 
-  geom_bar(stat="bin", fill="#66B2FF", colour="black") +
+  geom_bar(stat="count", fill="#66B2FF", colour="black") +
   theme(
     axis.text.x = element_text(angle = 0, hjust = 0.5, vjust=0.5, size=9, colour = "black"), 
     axis.text.y = element_text(size=7, colour = "black"),
@@ -97,7 +97,7 @@ ggplot(long,aes(x=k1c)) +
   scale_x_discrete(drop=FALSE) +
   scale_y_continuous(breaks=mybreaks) +
   scale_fill_discrete(drop=FALSE) + 
-  geom_bar(stat="bin", fill="#66B2FF", colour="black") +
+  geom_bar(stat="count", fill="#66B2FF", colour="black") +
   theme(
     axis.text.x = element_text(angle = 0, hjust = 0.5, vjust=0.5, size=9, colour = "black"), 
     axis.text.y = element_text(size=7, colour = "black"),
@@ -126,7 +126,7 @@ ggplot(long,aes(x=k1d)) +
   scale_x_discrete(drop=FALSE) +
   scale_y_continuous(breaks=mybreaks) +
   scale_fill_discrete(drop=FALSE) + 
-  geom_bar(stat="bin", fill="#66B2FF", colour="black") +
+  geom_bar(stat="count", fill="#66B2FF", colour="black") +
   theme(
     axis.text.x = element_text(angle = 0, hjust = 0.5, vjust=0.5, size=9, colour = "black"), 
     axis.text.y = element_text(size=7, colour = "black"),
@@ -154,7 +154,7 @@ ggplot(studiengangsdaten,aes(x=k1e_SQ001)) +
   scale_x_discrete(drop=FALSE) +
   scale_y_continuous(breaks=mybreaks) +
   scale_fill_discrete(drop=FALSE) + 
-  geom_bar(stat="bin", fill="#66B2FF", colour="black") +
+  geom_bar(stat="count", fill="#66B2FF", colour="black") +
   theme(
     axis.text.x = element_text(angle = 0, hjust = 0.5, vjust=0.5, size=9, colour = "black"), 
     axis.text.y = element_text(size=7, colour = "black"),

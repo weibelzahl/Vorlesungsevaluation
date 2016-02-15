@@ -1,4 +1,16 @@
 Studiengang;Veranstaltung;Dozent;Dozentenwahl
+BScGM1;Mikroökonomik;Prof. Dr. Joachim Ahrens;0
+BScGM1;Gründungsmanagement;Prof. Dr. Bernhard H. Vollmar;0
+BScGM1;Methodisches Arbeiten I;Prof. Dr. Joachim Ahrens;0
+BScGM1;Grundlagen der Wirtschaftsinformatik I;Prof. Dr. Hubert Schüle;0
+BScGM1;Buchführung und Abschluss;Prof. Dr. Antje Mörstedt;0
+BScGM1;Kosten- und Leistungsrechnung;Prof. Dr. Manfred P. Zilling;0
+BScGM1;Methodisches Arbeiten II;Joachim Algermissen;0
+BScGM1;Englisch I;Robert Óbraonáin, Hiltraud Haindorff;1
+BScGM1;2. Fremdsprache;Chinesisch - Weihong Chen-Dieckmann, Spanisch Fortgeschrittene - Mónica Naranjo-Merboldt, Spanisch - Heike Georges, Französisch - Heike Georges;1
+BScGM1;Zeitmanagement;Björn Thullner;0
+BScGM1ABWL;Mathematik;Markus Ahlborn;0
+BScGM1ABWL;Einführung in die BWL;Prof. Dr. Frank Albe;0
 BScGM2;Wirtschaftsrecht;Prof. Dr. Bernd Rohlfing;0
 BScGM2;Steuerrecht;Dr. Frank Oettler;0
 BScGM2;Handelsrechtliche Bewertung;Prof. Dr. Antje-Britta Mörstedt;0
@@ -11,6 +23,16 @@ BScGM2;Vertrieb;Prof. Dr. Michael Heinlein;0
 BScGM2;Englisch II;Robert Óbraonáin, Hiltraud Haindorff, Dorina Achelaritei;1
 BScGM2;2. Fremdsprache;Chinesisch - Weihong Chen-Dieckmann, Spanisch - Mónica Naranjo-Merboldt, Spanisch - Heike Georges;1
 BScGM2;Präsentationstechniken / Visualisierung / Rhetorik;Björn Thullner, Katrin Schöft;1
+BScGM3;Finanzierung/Investition;Prof. Dr. Bernhard H. Vollmar;0
+BScGM3;Organisation/Personal;Prof. Dr. Antje-Britta Mörstedt;0
+BScGM3;Logistische Prozesse;Dr. Lothar Herold;0
+BScGM3;Grundlagen Wirtschaftsinformatik III;Prof. Dr. Hubert Schüle;0
+BScGM3;BWL ausgewählter Wirtschaftssektoren;Prof. Dr. Michael Heinlein;0
+BScGM3;Globale Wirtschaft;Prof. Dr. Joachim Ahrens;0
+BScGM3;Fallstudien / Projektarbeit;Pro-City GmbH Göttingen - Prof. Dr. Ahrens, MAS-Analytics UG - Prof. Dr. Vollmar, Bio-Zentrale Naturprodukte GmbH - Prof. Dr. Voss, Göttinger Symphonie Orchester - Prof. Dr. Sierke, Regionales Demografie Netzwerk (ReDeNetz) - Prof. Dr. Mörstedt, Gemeinnütziger Tierschutzverein Herzenshunde von Feteni - Prof. Dr. Mörstedt, Deutsches Rotes Kreuz - Prof. Dr. Ahrens, Deloitte \& Touche GmbH - Prof. Dr. Albe;1
+BScGM3;Englisch III;Robert Óbraonáin, Hiltraud Haindorff, Antje Menster;1
+BScGM3;2. Fremdsprache III;Chinesisch - Weihong Chen-Dieckmann, Spanisch Fortgeschrittene - Mónica Naranjo-Merboldt, Spanisch Anfänger - Heike Georges;1
+BScGM3;Soft Skills III;Michael Ballhause;0
 BScGM4;Controlling;Prof. Dr. Frank Albe;0
 BScGM4;Kostenrechnungssysteme;Prof. Dr. Frank Albe;0
 BScGM4;Bilanzen;Prof. Dr. Michael Dusemond;0
@@ -21,6 +43,25 @@ BScGM4;Englisch IV;Robert Óbraonáin, Hiltraud Haindorff, Susan Schanz;1
 BScGM4;Fremdsprache IV;Chinesisch - Mingqiu Zhou, Spanisch Fortgeschrittene - Mónica Naranjo-Merboldt, Spanisch Anfänger - Heike Georges, Französisch - Lyliane Pieper-Debeneix;1
 BScGM4;Teamtraining;Herr Björn Thullner;0
 BScGM4;Business Process Management;Prof. Dr. Hubert Schüle;0
+BScGM5;Corporate Law;Prof. Dr. Bernd Rohlfing;0
+BScGM5;Executive Management;Prof. Dr. Frank Albe und Prof. Dr. Hans-Christian Riekhof;0
+BScGM5;Strategisches Food and Agribusiness Management;Prof. Dr. Julian Voss;0
+BScGM5;Marketing für Lebensmittel und Agrarprodukte;Prof. Dr. Julian Voss;0
+BScGM5;Vertiefungsfach BWL I;Entrepreneurship - Prof. Dr. Manfred Zilling / Prof. Dr. Bernhard Vollmar, Industrielles Management - Prof. Dr. Bloech, Tourism and Travel Management - Prof. Dr. Albe, International Accounting/Controlling - Prof. Dr. Andrejewski / Prof. Dr. Dusemond, Internationales Marketing - Prof. Dr. Riekhof, Vertriebsmanagement - Prof. Dr. Heinlein;1
+BScGM5;Vertiefungsfach BWL II;Entrepreneurship - Prof. Dr. Manfred Zilling / Prof. Dr. Bernhard Vollmar, Industrielles Management - Prof. Dr. Bloech, Tourism and Travel Management - Prof. Dr. Albe, International Accounting/Controlling - Prof. Dr. Andrejewski / Prof. Dr. Dusemond, Internationales Marketing - Prof. Dr. Riekhof, Vertriebsmanagement - Prof. Dr. Heinlein;1
+BScGM5;Englisch V;Frau Susan Schanz, Frau Marie Smith;1
+BScGM5;Fremdsprache V;Chinesisch - Mingqiu Zhou, Spanisch - Heike Georges, Spanisch - Mónica Naranjo-Merboldt;1
+BScGM5;Soft Skills V, Gesprächs- und Verhandlungsführung;Björn Thullner;0
+BScPsy1;Historische Entwicklung der Psychologie;Prof. Dr. Michael Gutmann;0
+BScPsy1;Einführung in die Forschungsmethoden;Prof. Dr. Stephan Weibelzahl;0
+BScPsy1;Aktuelle Forschungsfelder der Psychologie;Prof. Dr. Anja Lepach;0
+BScPsy1;Statistik - Diskriptive Statistik;Prof. Dr. Monika Fleischhauer;0
+BScPsy1;Wahrnehmung und Sprache;Prof. Dr. Dorit Wenke;0
+BScPsy1;Lernen und Gedächtnis;Prof. Dr. Dorit Wenke;0
+BScPsy1;Biopsychologische Grundlagen;Prof. Dr. Anja Lepach;0
+BScPsy1;Biologische Psychologie Vertiefung;Prof. Dr. Anja Lepach;0
+BScPsy1;Differentielle Psychologie - Theoretische Ansätze;Prof. Dr. Monika Fleischhauer;0
+BScPsy1;Differentielle Psychologie - Vertiefung;Prof. Dr. Monika Fleischhauer;0
 MAGM;Auditing/ Revision;Prof. Dr. Frank Beine / Prof. Dr. Andrejewski;0
 MAGM;International Accounting;Prof. Dr. Michael Dusemond;0
 MAGM;Konzernrechnungslegung;Prof. Dr. Michael Dusemond;0
@@ -36,3 +77,18 @@ MAGM;Corporate Financial Management II;Prof. Dr. Bernhard Vollmar;0
 MAGM;International Political Economy;Prof. Dr. Joachim Ahrens;0
 MAGM;Englisch;Frau Susan Schanz;0
 MAGM;Leadership-Training;Herr Andreas Biskup;0
+MAGMWS;Unternehmensbewertung M\&A;Prof. Dr. Frank Beine;0
+MAGMWS;Steuern;Dr. Frank Oettler;0
+MAGMWS;Corporate Finance;Prof. Dr. Kai C. Andrejewski;0
+MAGMWS;Strategische Unternehmensführung;Dr. Jobst-Walter Dietz;0
+MAGMWS;Human Resources Management;Prof. Dr. Antje Mörstedt;0
+MAGMWS;Organisation;Prof. Dr. Antje Mörstedt;0
+MAGMWS;Strategische Unternehmensführung;Prof. Dr. Jobst-Walter Dietz;0
+MAGMWS;Industrielles Management I;Prof. Dr. Jürgen Bloech;0
+MAGMWS;Tourism and Travel Management I;Prof. Dr. Frank Albe;0
+MAGMWS;Vertriebsmanagement I;Prof. Dr. Michael Heinlein;0
+MAGMWS;Internationales Marketing I;Prof. Dr. Hans-Christian Riekhof;0
+MAGMWS;E-Business I;Prof. Dr. Hubert Schüle;0
+MAGMWS;Corporate Financial Management I;Prof. Dr. Bernhard Vollmar;0
+MAGMWS;Englisch;Frau Susan Schanz;0
+MAGMWS;Konfliktmanagement;Andreas Biskup;0
