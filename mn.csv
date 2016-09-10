@@ -20,9 +20,9 @@ BScGM2;Statistik;Dr. Andrea Eickemeyer;0
 BScGM2;Produktion;Prof. Dr. Jürgen Bloech;0
 BScGM2;Marketing;Prof. Dr. Hans-Christian Riekhof;0
 BScGM2;Vertrieb;Prof. Dr. Michael Heinlein;0
-BScGM2;Englisch II;Robert Óbraonáin, Hiltraud Haindorff, Dorina Achelaritei;1
-BScGM2;2. Fremdsprache;Chinesisch - Weihong Chen-Dieckmann, Spanisch - Mónica Naranjo-Merboldt, Spanisch - Heike Georges;1
-BScGM2;Präsentationstechniken / Visualisierung / Rhetorik;Björn Thullner, Katrin Schöft;1
+BScGM2;Englisch II;Robert Óbraonáin, Hiltraud Haindorff, Antje Menster;1
+BScGM2;2. Fremdsprache;Französisch - Heike Georges, Spanisch - Mónica Naranjo-Merboldt, Spanisch - Heike Georges, Chinesisch - Weihong Chen-Dieckmann;1
+BScGM2;Präsentationstechniken / Visualisierung / Rhetorik;Björn Thullner;0
 BScGM3;Finanzierung/Investition;Prof. Dr. Bernhard H. Vollmar;0
 BScGM3;Organisation/Personal;Prof. Dr. Antje-Britta Mörstedt;0
 BScGM3;Logistische Prozesse;Dr. Lothar Herold;0
@@ -39,8 +39,8 @@ BScGM4;Bilanzen;Prof. Dr. Michael Dusemond;0
 BScGM4;Planspiel;Prof. Dr. Frank Albe;0
 BScGM4;Internationales Management;Prof. Dr. Hans-Christian Riekhof;0
 BScGM4;Wirtschaftspolitik;Prof. Dr. Joachim Ahrens;0
-BScGM4;Englisch IV;Robert Óbraonáin, Hiltraud Haindorff, Susan Schanz;1
-BScGM4;Fremdsprache IV;Chinesisch - Mingqiu Zhou, Spanisch Fortgeschrittene - Mónica Naranjo-Merboldt, Spanisch Anfänger - Heike Georges, Französisch - Lyliane Pieper-Debeneix;1
+BScGM4;Englisch IV;Antje Menster, Hiltraud Haindorff, Susan Schanz;1
+BScGM4;Fremdsprache IV;Chinesisch -  Weihong Chen-Dieckmann, Spanisch - Mónica Naranjo-Merboldt, Spanisch - Heike Georges;1
 BScGM4;Teamtraining;Herr Björn Thullner;0
 BScGM4;Business Process Management;Prof. Dr. Hubert Schüle;0
 BScGM5;Corporate Law;Prof. Dr. Bernd Rohlfing;0
@@ -62,6 +62,23 @@ BScPsy1;Biopsychologische Grundlagen;Prof. Dr. Anja Lepach;0
 BScPsy1;Biologische Psychologie Vertiefung;Prof. Dr. Anja Lepach;0
 BScPsy1;Differentielle Psychologie - Theoretische Ansätze;Prof. Dr. Monika Fleischhauer;0
 BScPsy1;Differentielle Psychologie - Vertiefung;Prof. Dr. Monika Fleischhauer;0
+BScPsy2;Wirtschaftspolitik;Prof. Dr. Joachim Ahrens;0
+BScPsy2;Statistik II - Testverfahren;Andreas Cordes;0
+BScPsy2;Statistik II - Computergestützte Datenanalyse;Andreas Cordes;0
+BScPsy2;Denken und Entscheiden;Prof. Dr. Dorit Wenke;0
+BScPsy2;Angewandte Entscheidungspsychologie;Prof. Dr. Dorit Wenke;0
+BScPsy2;Biologische Psychologie;Prof. Dr. Anja Lepach-Engelhardt;0
+BScPsy2;Differentielle Psychologie - Methoden und Intelligenz;Prof. Dr. Monika Fleischhauer;0
+BScPsy2;Differentielle Psychologie - Vertiefung;Prof. Dr. Monika Fleischhauer;0
+BScPsy2;Sozialpsychologie, Individuum und Soziale Welt;Prof. Dr. Frank Vogelgesang;0
+BScPsy2;Sozialpsychologie, Vertiefung;Prof. Dr. Frank Vogelgesang;0
+BScPsy2;Ökonomische Psychologie und Entscheidungen;Prof. Dr. Stephan Weibelzahl;0
+BScPsy2;Alltagsverständnis von Ökonomie und Arbeitsmärkte;Prof. Dr. Stephan Weibelzahl;0
+BScPsy2;Wirtschaftspsychologie - Vertiefung;Prof. Dr. Stephan Weibelzahl;0
+BScPsy2;Ablauf einer empirischen Untersuchung, Techniken wissenschaftlichen Arbeitens;Prof. Dr. Dorit Wenke;0
+BScPsy2;Moderation, Präsentation und Schreiben;Prof. Dr. Dorit Wenke, Karen Weiske;0
+BScPsy2;Entwicklungspsychologie - kognitive, emotionale und soziale Entwicklung;Prof. Dr. Anja Lepach-Engelhardt;0
+BScPsy2;Entwicklungspsychologie - ausgewählte Bereiche der Entwicklung;Prof. Dr. Anja Lepach-Engelhardt;0
 MAGM;Auditing/ Revision;Prof. Dr. Frank Beine / Prof. Dr. Andrejewski;0
 MAGM;International Accounting;Prof. Dr. Michael Dusemond;0
 MAGM;Konzernrechnungslegung;Prof. Dr. Michael Dusemond;0

@@ -138,4 +138,3 @@ names(data)[k+22] <- "k1fa"
 data[, k+23] <- as.character(data[, k+23])
 attributes(data)$variable.labels[k+23] <- "Was können wir besser machen? (z. B. Inhalte, Vermittlung, Organisation, dieser Fragebogen)"
 names(data)[k+23] <- "k1fb"
-

@@ -3,7 +3,7 @@ library(ggplot2)
 
 shinyUI(fluidPage(
   img(src = "logo.jpg", align = "right"),
-  titlePanel("Evaluation von Vorlesungen (ab SS2015)"),
+  titlePanel("Evaluation von Vorlesungen (ab SS2016)"),
   verticalLayout(
     fileInput(
       'data_vorlesung', 'Limesurveydaten (R Export)',
@@ -11,6 +11,7 @@ shinyUI(fluidPage(
                'text/comma-separated-values,text/plain', 
                '.csv')
     ),
+    # radioButtons('format', "Format", c("pdf"="pdf", "html"="html")),  
     selectInput('kategorie', 'Studiengang und Modul/Fach', choices = list(
       `BSc General Management 1. Semester` = 
         c(Alle = 'BScGM1', 
@@ -28,6 +29,10 @@ shinyUI(fluidPage(
           "2. Fremdsprache; Spanisch - Heike Georges" = "BScGM1_9_3",
           "2. Fremdsprache; Französisch - Heike Georges" = "BScGM1_9_4",
           "Zeitmanagement; Björn Thullner" = "BScGM1_10"),
+      `BSc General Management 1. Semester (nur Mathematik und Einführung BWL)` = 
+        c(Alle = 'BScGM1ABWL', 
+          "Mathematik; Markus Ahlborn" = "BScGM1ABWL_1",
+          "Einführung in die BWL; Prof. Dr. Frank Albe" = "BScGM1ABWL_2"),
       `BSc General Management 2. Semester` = 
         c(Alle = 'BScGM2', 
           "Wirtschaftsrecht; Prof. Dr. Bernd Rohlfing" = "BScGM2_1",
@@ -41,10 +46,11 @@ shinyUI(fluidPage(
           "Vertrieb; Prof. Dr. Michael Heinlein" = "BScGM2_9",
           "Englisch II; Robert Óbraonáin" = "BScGM2_10_1",
           "Englisch II; Hiltraud Haindorff" = "BScGM2_10_2",
-          "Englisch II; Dorina Achelaritei" = "BScGM2_10_3",
-          "2. Fremdsprache; Chinesisch - Weihong Chen-Dieckmann" = "BScGM2_11_1",
-          "2. Fremdsprache; Spanisch - Mónica Naranjo-Merboldt" = "BScGM2_11_3",
+          "Englisch II; Antje Menster" = "BScGM2_10_3",
+          "2. Fremdsprache; Französisch - Heike George" = "BScGM2_11_1",
+          "2. Fremdsprache; Spanisch - Mónica Naranjo-Merboldt" = "BScGM2_11_2",
           "2. Fremdsprache; Spanisch - Heike Georges" = "BScGM2_11_3",
+          "2. Fremdsprache; Chinesisch - Weihong Chen-Dieckmann" = "BScGM2_11_4",
           "Präsentationstechniken / Visualisierung / Rhetorik; Björn Thullner" = "BScGM2_12_1",
           "Präsentationstechniken / Visualisierung / Rhetorik; Katrin Schöft" = "BScGM2_12_2"),
       `BSc General Management 3. Semester` = 
@@ -76,15 +82,14 @@ shinyUI(fluidPage(
           "Kostenrechnungssysteme; Prof. Dr. Frank Albe" = "BScGM4_2",
           "Bilanzen; Prof. Dr. Michael Dusemond" = "BScGM4_3",
           "Planspiel; Prof. Dr. Frank Albe" = "BScGM4_4",
-          "Internationales Management;Prof. Dr. Hans-Christian Riekhof" = "BScGM4_5",
+          "Internationales Management; Prof. Dr. Hans-Christian Riekhof" = "BScGM4_5",
           "Wirtschaftspolitik; Prof. Dr. Joachim Ahrens" = "BScGM4_6",
-          "Englisch IV; Robert Óbraonáin" = "BScGM4_7_1",
+          "Englisch IV; Antje Menster" = "BScGM4_7_1",
           "Englisch IV; Hiltraud Haindorff" = "BScGM4_7_2",
           "Englisch IV; Susan Schanz" = "BScGM4_7_3",
-          "Fremdsprache IV; Chinesisch - Mingqiu Zhou" = "BScGM4_8_1",
-          "Fremdsprache IV; Spanisch Fortgeschrittene - Mónica Naranjo-Merboldt" = "BScGM4_8_2",
-          "Fremdsprache IV; Spanisch Anfänger - Heike Georges" = "BScGM4_8_3",
-          "Fremdsprache IV; Französisch - Lyliane Pieper-Debeneix" = "BScGM4_8_4",
+          "Fremdsprache IV; Chinesisch - Weihong Chen-Dieckmann" = "BScGM4_8_1",
+          "Fremdsprache IV; Spanisch - Mónica Naranjo-Merboldt" = "BScGM4_8_2",
+          "Fremdsprache IV; Spanisch - Heike Georges" = "BScGM4_8_3",
           "Teamtraining; Herr Björn Thullner" = "BScGM4_9",
           "Business Process Management; Prof. Dr. Hubert Schüle" = "BScGM4_10"),
       `BSc General Management 5. Semester` = 
@@ -123,7 +128,26 @@ shinyUI(fluidPage(
           "Biologische Psychologie Vertiefung; Prof. Dr. Anja Lepach" = "BScPsy1_8",
           "Differentielle Psychologie - Theoretische Ansätze; Prof. Dr. Monika Fleischhauer" = "BScPsy1_9",
           "Differentielle Psychologie - Vertiefung;Prof. Dr. Monika Fleischhauer" = "BScPsy1_10"),
-        `Master General Management (SS)` = 
+      `BSc Psychologie/Wirtschaftspsychologie 2. Semester` = 
+        c(Alle = 'BScPsy2', 
+          "Wirtschaftspolitik;Prof. Dr. Joachim Ahrens" = "BScPsy2_1",
+          "Statistik II - Testverfahren; Andreas Cordes" = "BScPsy2_2",
+          "Statistik II - Computergestützte Datenanalyse; Andreas Cordes" = "BScPsy2_3",
+          "Denken und Entscheiden; Prof. Dr. Dorit Wenke" = "BScPsy2_4",
+          "Angewandte Entscheidungspsychologie; Prof. Dr. Dorit Wenke" = "BScPsy2_5",
+          "Biologische Psychologie; Prof. Dr. Anja Lepach-Engelhardt" = "BScPsy2_6",
+          "Differentielle Psychologie - Methoden und Intelligenz; Prof. Dr. Monika Fleischhauer" = "BScPsy2_7",
+          "Differentielle Psychologie - Vertiefung; Prof. Dr. Monika Fleischhauer" = "BScPsy2_8",
+          "Sozialpsychologie, Individuum und Soziale Welt; Prof. Dr. Frank Vogelgesang" = "BScPsy2_9",
+          "Sozialpsychologie, Vertiefung; Prof. Dr. Frank Vogelgesang" = "BScPsy2_10",
+          "Ökonomische Psychologie und Entscheidungen; Prof. Dr. Stephan Weibelzahl" = "BScPsy2_11",
+          "Alltagsverständnis von Ökonomie und Arbeitsmärkte; Prof. Dr. Stephan Weibelzahl" = "BScPsy2_12",
+          "Wirtschaftspsychologie - Vertiefung; Prof. Dr. Stephan Weibelzahl" = "BScPsy2_13",
+          "Ablauf einer empirischen Untersuchung, Techniken wissenschaftlichen Arbeitens; Prof. Dr. Dorit Wenke" = "BScPsy2_14",
+          "Moderation, Präsentation und Schreiben; Prof. Dr. Dorit Wenke, Karen Weiske" = "BScPsy2_15",
+          "Entwicklungspsychologie - kognitive, emotionale und soziale Entwicklung; Prof. Dr. Anja Lepach-Engelhardt" = "BScPsy2_16",
+          "Entwicklungspsychologie - ausgewählte Bereiche der Entwicklung; Prof. Dr. Anja Lepach-Engelhardt" = "BScPsy2_17"),
+          `Master General Management (SS)` = 
         c(Alle = 'MAGM', 
           "Auditing/ Revision; Prof. Dr. Frank Beine / Prof. Dr. Andrejewski" = "MAGM_1",
           "International Accounting; Prof. Dr. Michael Dusemond" = "MAGM_2",

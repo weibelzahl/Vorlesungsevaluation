@@ -32,3 +32,4 @@ data[, 8] <- as.numeric(data[, 8])
 attributes(data)$variable.labels[8] <- "E-Mail-Adresse für Rückfragen (optional):"
 names(data)[8] <- "A4"
 
+

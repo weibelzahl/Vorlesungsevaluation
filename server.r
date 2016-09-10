@@ -20,14 +20,16 @@ shinyServer(function(input, output) {
         # generate PDF
         library(knitr)
         knit2pdf("generic_vorlesung_mini.rnw", encoding = "UTF-8")
-        
+
         # copy pdf to 'file'
         file.copy("generic_vorlesung_mini.pdf", file)
         
         # delete generated files
         file.remove(
-          "generic_vorlesung_mini.pdf", "generic_vorlesung_mini.tex",
-          "generic_vorlesung_mini.aux", "generic_vorlesung_mini.log",
+          "generic_vorlesung_mini.pdf", 
+          "generic_vorlesung_mini.tex",
+          "generic_vorlesung_mini.aux", 
+          "generic_vorlesung_mini.log",
           "generic_vorlesung_mini.toc"
         )
         
