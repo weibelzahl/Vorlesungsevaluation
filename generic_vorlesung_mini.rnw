@@ -109,6 +109,22 @@ alle_dozenten <- length(unlist(strsplit(studiengang_modul_id, "_"))) == 1
       if(i>1 && studiengang_id == "BScGM1"){
         offset <- 11
       }
+      # special case BScGM5 Vertiefungsfach
+      if(i>4 && studiengang_id == "BScGM3"){
+        offset <- 10
+      }
+      # special case BScGM5 Vertiefungsfach
+      if(i>4 && studiengang_id == "BScGM5"){
+        offset <- 16
+      }
+      # special case BScGM5 Vertiefungsfach
+      if(i>8 && studiengang_id == "BScPsy3"){
+        offset <- 13
+      }
+      # special case BScGM5 Vertiefungsfach
+      if(i>18 && studiengang_id == "BScPsy3"){
+        offset <- 4
+      }
       # 2nd special case MAGM: Vertiefungswahl
       if(i>6 && studiengang_id == "MAGM"){
         offset <- 16

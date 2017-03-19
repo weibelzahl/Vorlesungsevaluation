@@ -49,7 +49,7 @@ ggplot(long,aes(x=k1a)) +
     axis.text.y = element_text(size=7, colour = "black"),
     axis.title=element_text(size=9)
     ) +
-  ylab("Häufigkeiten je Antwort") + 
+  ylab("H\u00E4ufigkeiten je Antwort") + 
   xlab("") +
   facet_wrap( ~ time, ncol=1)
 
@@ -66,7 +66,7 @@ long <- reshape(studiengangsdaten, dir = "long", varying = 7:15, sep="_", drop =
 
 levels(long$k1b) <- gsub("sehr ", "sehr\n ", c(levels(long$k1b)))
 levels(long$k1b) <- gsub("für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen", "für diese\n Veranstaltung\n irrelevant\n bzw. kann ich\n (derzeit)\n nicht\n beurteilen", c(levels(long$k1b)), fixed=TRUE)
-long$time <- factor(long$time, levels=c("SQ001","SQ002","SQ003","SQ004","SQ005","SQ006","SQ007","SQ008","SQ009"),labels=c("Konzeption und Aufbau der Vorlesung", "Klarheit der Lernziele (zu erwerbendes bzw. vertiefendes Wissen)", "Didaktische Fähigkeiten der/des Lehrenden zur Vermittlung und Veranschaulichung der Inhalte", "Anregende und lebendige Gestaltung der Vorlesung", "Zur Verfügung gestellte Materialien", "Angemessener Einsatz von Medien", "Möglichkeiten zur aktiven Beteiligung und Mitarbeit in der Vorlesung\n (entsprechend der Anzahl der Teilnehmer/innen in der Veranstaltung)", "Bereitschaft der/des Lehrenden, Vorschläge, Rückmeldungen und Kritik offen aufzunehmen", "Arbeitsatmosphäre in der Vorlesung")) 
+long$time <- factor(long$time, levels=c("SQ001","SQ002","SQ003","SQ004","SQ005","SQ006","SQ007","SQ008","SQ009"),labels=c("Konzeption und Aufbau der Vorlesung", "Klarheit der Lernziele (zu erwerbendes bzw. vertiefendes Wissen)", "Didaktische F\u00E4higkeiten der/des Lehrenden zur Vermittlung und Veranschaulichung der Inhalte", "Anregende und lebendige Gestaltung der Vorlesung", "Zur Verfügung gestellte Materialien", "Angemessener Einsatz von Medien", "Möglichkeiten zur aktiven Beteiligung und Mitarbeit in der Vorlesung\n (entsprechend der Anzahl der Teilnehmer/innen in der Veranstaltung)", "Bereitschaft der/des Lehrenden, Vorschl\u00E4ge, Rückmeldungen und Kritik offen aufzunehmen", "Arbeitsatmosph\u00E4re in der Vorlesung")) 
 
 ggplot(long,aes(x=k1b)) +
   scale_x_discrete(drop=FALSE) +
@@ -78,7 +78,7 @@ ggplot(long,aes(x=k1b)) +
     axis.text.y = element_text(size=7, colour = "black"),
     axis.title=element_text(size=9)
     ) +
-  ylab("Häufigkeiten je Antwort") + 
+  ylab("H\u00E4ufigkeiten je Antwort") + 
   xlab("") +
   facet_wrap( ~ time, ncol=1)
 
@@ -103,7 +103,7 @@ ggplot(long,aes(x=k1c)) +
     axis.text.y = element_text(size=7, colour = "black"),
     axis.title=element_text(size=9)
     ) +
-  ylab("Häufigkeiten je Antwort") + 
+  ylab("H\u00E4ufigkeiten je Antwort") + 
   xlab("") +
   facet_wrap( ~ time, ncol=1)
 
@@ -120,7 +120,7 @@ long <- reshape(studiengangsdaten, dir = "long", varying = 20:21, sep="_", drop 
 
 levels(long$k1d) <- gsub("sehr ", "sehr\n ", c(levels(long$k1d)))
 levels(long$k1d) <- gsub("für diese Veranstaltung irrelevant bzw. kann ich (derzeit) nicht beurteilen", "für diese\n Veranstaltung\n irrelevant\n bzw. kann ich\n (derzeit)\n nicht\n beurteilen", c(levels(long$k1d)), fixed=TRUE)
-long$time <- factor(long$time, levels=c("SQ001","SQ002"),labels=c("Größe und Zustand des Raumes bzw. der Räume für die Vorlesung", "Angemessenheit und Funktionalität der technischen Ausstattung")) 
+long$time <- factor(long$time, levels=c("SQ001","SQ002"),labels=c("Größe und Zustand des Raumes bzw. der R\u00E4ume für die Vorlesung", "Angemessenheit und Funktionalit\u00E4t der technischen Ausstattung")) 
 
 ggplot(long,aes(x=k1d)) +
   scale_x_discrete(drop=FALSE) +
@@ -132,7 +132,7 @@ ggplot(long,aes(x=k1d)) +
     axis.text.y = element_text(size=7, colour = "black"),
     axis.title=element_text(size=9)
     ) +
-  ylab("Häufigkeiten je Antwort") + 
+  ylab("H\u00E4ufigkeiten je Antwort") + 
   xlab("") +
   facet_wrap( ~ time, ncol=1)
 
@@ -149,18 +149,20 @@ noten_numeric <- studiengangsdaten$k1e_SQ001
 noten_numeric <- as.numeric(levels(noten_numeric)[noten_numeric])
 schnitt <- round(mean(noten_numeric, na.rm = TRUE), digits = 2)
 streuung <- round(sd(noten_numeric, na.rm = TRUE), digits = 2)
+#studiengangsdaten$k1e_SQ001_NA <- studiengangsdaten$k1e_SQ001
+#studiengangsdaten$k1e_SQ001_NA[is.na(studiengangsdaten$k1e_SQ001_NA)] <- "keine Angabe"
 
-ggplot(studiengangsdaten,aes(x=k1e_SQ001)) +
+ggplot(studiengangsdaten,aes(x=k1e_SQ001, na.rm=TRUE)) +
   scale_x_discrete(drop=FALSE) +
   scale_y_continuous(breaks=mybreaks) +
   scale_fill_discrete(drop=FALSE) + 
-  geom_bar(stat="count", fill="#66B2FF", colour="black") +
+  geom_bar(stat="count", fill="#66B2FF", colour="black", na.rm = TRUE) +
   theme(
     axis.text.x = element_text(angle = 0, hjust = 0.5, vjust=0.5, size=9, colour = "black"), 
     axis.text.y = element_text(size=7, colour = "black"),
     axis.title=element_text(size=9)
     ) +
-  ylab("Häuf. je Ant.") + 
+  ylab("H\u00E4uf. je Ant.") + 
   xlab("")
   
 @

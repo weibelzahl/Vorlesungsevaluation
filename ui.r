@@ -3,7 +3,7 @@ library(ggplot2)
 
 shinyUI(fluidPage(
   img(src = "logo.jpg", align = "right"),
-  titlePanel("Evaluation von Vorlesungen (ab SS2016)"),
+  titlePanel("Evaluation von Vorlesungen (ab WS2016)"),
   verticalLayout(
     fileInput(
       'data_vorlesung', 'Limesurveydaten (R Export)',
@@ -147,7 +147,30 @@ shinyUI(fluidPage(
           "Moderation, Präsentation und Schreiben; Prof. Dr. Dorit Wenke, Karen Weiske" = "BScPsy2_15",
           "Entwicklungspsychologie - kognitive, emotionale und soziale Entwicklung; Prof. Dr. Anja Lepach-Engelhardt" = "BScPsy2_16",
           "Entwicklungspsychologie - ausgewählte Bereiche der Entwicklung; Prof. Dr. Anja Lepach-Engelhardt" = "BScPsy2_17"),
-          `Master General Management (SS)` = 
+      `BSc Psychologie/Wirtschaftspsychologie 3. Semester` = 
+        c(Alle = 'BScPsy3', 
+          "Sozialpsychologie Interaktion und Gruppe;Prof. Dr. Frank Vogelgesang" = "BScPsy3_1",
+          "Sozialpsychologische Vertiefung;Prof. Dr. Frank Vogelgesang" = "BScPsy3_2",
+          "Entwicklungspsychologie - kognitive Entwicklung, Motivation, Persönlichkeit und Selbst;Prof. Dr. Anja Lepach-Engelhardt" = "BScPsy3_3",
+          "Entwicklungspsychologie - ausgewählte Bereiche der Entwicklung;Prof. Dr. Anja Lepach-Engelhardt" = "BScPsy3_4",
+          "Differentielle Psychologie - Theoretische Ansätze;Prof. Dr. Monika Fleischhauer" = "BScPsy3_5",
+          "Differentielle Psychologie - Vertiefung;Prof. Dr. Monika Fleischhauer" = "BScPsy3_6",
+          "Grundlagen der Testtheorie;Christoph Ehrling" = "BScPsy3_7",
+          "Grundlagen der Psychologischen Diagnostik;Prof. Dr. Monika Fleischhauer" = "BScPsy3_8",
+          "Arbeitspsychologie;Prof. Dr. Frank Vogelgesang" = "BScPsy3_9",
+          "Arbeitspsychologie - Übung;Prof. Dr. Frank Vogelgesang" = "BScPsy3_10",
+          "Klinische Psychologie - Modelle und Grundlagen;Prof. Dr. Susanne Ruhland" = "BScPsy3_11",
+          "Klinische Psychologie - Diagnostik;Prof. Dr. Susanne Ruhland" = "BScPsy3_12",
+          "Einführung in die Themen der Pädagogsichen Psychologie;Prof. Dr. Anja Lepach-Engelhardt" = "BScPsy3_13",
+          "Lernen und Lehren;Prof. Dr. Anja Lepach-Engelhardt" = "BScPsy3_14",
+          "Einführung in die Gesundheitspsychologie;Prof. Dr. Michael Gutmann" = "BScPsy3_15",
+          "Konzepte von Gesundheit und Krankheit;Prof. Dr. Michael Gutmann" = "BScPsy3_16",
+          "Arbeitsrecht Fallbeispiele;Prof. Dr. Bernd Rohlfing" = "BScPsy3_17",
+          "Emotion und Motivation (WiPsy) (nicht auswertbar)" = "BScPsy3_18",
+          "Emotion und Motivation - Vertiefung (WiPsy);Prof. Dr. Dorit Wenke" = "BScPsy3_19",
+          "Arbeitspsychologie (WiPsy);Prof. Dr. Frank Vogelgesang" = "BScPsy3_20",
+          "Arbeitspsychologie - Übung (WiPsy);Prof. Dr. Frank Vogelgesang" = "BScPsy3_21"),
+      `Master General Management (SS)` = 
         c(Alle = 'MAGM', 
           "Auditing/ Revision; Prof. Dr. Frank Beine / Prof. Dr. Andrejewski" = "MAGM_1",
           "International Accounting; Prof. Dr. Michael Dusemond" = "MAGM_2",
