@@ -84,12 +84,12 @@ source("generic_syntax_file.r", encoding = "UTF-8", local = TRUE)
 
 # select complete answers only
 data <- data[!is.na(data$submitdate),]
-# write.csv(head(data[1:8,c(1:3,9:15)]), file = "logger.csv")
+# write.table(head(data[1:8,c(1:3,9:15)]), file = "logger.csv", append = TRUE, sep=",")
 fragen <- 25 # questions per module
 offset <- offsets[[studiengang_id]] # col number of first module question
 spalten <- ncol(data)
 module <- (spalten - offset + 1) / fragen
-# write.csv(c("module: ", module), file = "logger.csv", append = TRUE)
+# write.table(c("module: ", module), file = "logger.csv", append = TRUE, sep=",")
 
 library(knitr)
 out = NULL
@@ -106,9 +106,9 @@ alle_dozenten <- length(unlist(strsplit(studiengang_modul_id, "_"))) == 1
     # only execute knitting if "all" or if module matches   
     if(alle_dozenten || ((unlist(strsplit(studiengang_modul_id, "_")))[2] == i)){  
       # special case BScGM1: 2 modules already evaluated
-      if(i>1 && studiengang_id == "BScGM1"){
-        offset <- 11
-      }
+#      if(i>1 && studiengang_id == "BScGM1"){
+#        offset <- 11
+#      }
       # special case BScGM5 Vertiefungsfach
       if(i>4 && studiengang_id == "BScGM3"){
         offset <- 10
@@ -134,7 +134,7 @@ alle_dozenten <- length(unlist(strsplit(studiengang_modul_id, "_"))) == 1
         offset <- 16
       }
       start <- ((i-1)*fragen)+offset
-      # write.csv(c("start", start), file = "logger.csv", append = TRUE)
+      # write.table(c("start", start), file = "logger.csv", append = TRUE, sep=",")
       modulname <- modulnamen$Veranstaltung[modulnamen$Studiengang==studiengang_id][i]
       dozent <- modulnamen$Dozent[modulnamen$Studiengang==studiengang_id][i]
       dozentenwahl <- modulnamen$Dozentenwahl[modulnamen$Studiengang==studiengang_id][i]
@@ -143,7 +143,7 @@ alle_dozenten <- length(unlist(strsplit(studiengang_modul_id, "_"))) == 1
 
             
       studiengangsdaten <- data[,start:(start+fragen-1)]
-      #write.csv(head(studiengangsdaten[1:5,1:5]), file = "logger.csv", append = TRUE)
+      # write.table(head(studiengangsdaten[1:5,1:5]), file = "logger.csv", append = TRUE, sep=",")
      if((dozentenwahl == 1) && (!alle_dozenten)){
         dozent_id <- as.integer((unlist(strsplit(studiengang_modul_id, "_")))[3])
         dozent_factor <- paste("A", dozent_id, sep="")

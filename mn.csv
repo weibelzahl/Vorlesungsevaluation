@@ -1,16 +1,16 @@
 Studiengang;Veranstaltung;Dozent;Dozentenwahl
 BScGM1;Mikroökonomik;Prof. Dr. Joachim Ahrens;0
+BScGM1;Mathematik;Markus Ahlborn;0
+BScGM1;Einführung in die BWL;Prof. Dr. Frank Albe;0
 BScGM1;Gründungsmanagement;Prof. Dr. Bernhard H. Vollmar;0
 BScGM1;Methodisches Arbeiten I;Prof. Dr. Joachim Ahrens;0
 BScGM1;Grundlagen der Wirtschaftsinformatik I;Prof. Dr. Hubert Schüle;0
 BScGM1;Buchführung und Abschluss;Prof. Dr. Antje Mörstedt;0
 BScGM1;Kosten- und Leistungsrechnung;Prof. Dr. Manfred P. Zilling;0
 BScGM1;Methodisches Arbeiten II;Joachim Algermissen;0
-BScGM1;Englisch I;Robert Óbraonáin, Hiltraud Haindorff;1
+BScGM1;Englisch I;Robert Óbraonáin, Hiltraud Haindorff, N.N.;1
 BScGM1;2. Fremdsprache;Chinesisch - Weihong Chen-Dieckmann, Spanisch Fortgeschrittene - Mónica Naranjo-Merboldt, Spanisch - Heike Georges, Französisch - Heike Georges;1
 BScGM1;Zeitmanagement;Björn Thullner;0
-BScGM1ABWL;Mathematik;Markus Ahlborn;0
-BScGM1ABWL;Einführung in die BWL;Prof. Dr. Frank Albe;0
 BScGM2;Wirtschaftsrecht;Prof. Dr. Bernd Rohlfing;0
 BScGM2;Steuerrecht;Dr. Frank Oettler;0
 BScGM2;Handelsrechtliche Bewertung;Prof. Dr. Antje-Britta Mörstedt;0
@@ -26,15 +26,15 @@ BScGM2;Präsentationstechniken / Visualisierung / Rhetorik;Björn Thullner;0
 BScGM3;Finanzierung/Investition;Prof. Dr. Bernhard H. Vollmar;0
 BScGM3;Organisation/Personal;Prof. Dr. Antje-Britta Mörstedt;0
 BScGM3;Logistische Prozesse;Dr. Lothar Herold;0
-BScGM3;Grundlagen Wirtschaftsinformatik III;Prof. Dr. Hubert Schüle;0
-BScGM3;Methoden des Business Intelligence Analytics I und II;N.N.;0
-BScGM3;Grundlagen des Entrepreneurships Modul;N.N.;0
-BScGM3;Grundlagen Innovationsmanagement;N.N.;0
+BScGM3;Grundlagen Wirtschaftsinformatik III;Prof. Hubert Schüle;0
+BScGM3;Methoden des Business Intelligence Analytics I und II;Prof. Hubert Schüle;0
+BScGM3;Grundlagen des Entrepreneurships Modul;Prof. Dr. Bernhard H. Vollmar / Prof. Dr. Manfred Zilling;0
+BScGM3;Grundlagen Innovationsmanagement;Prof. Dr. Manfred Zilling;0
 BScGM3;BWL ausgewählter Wirtschaftssektoren;Prof. Dr. Michael Heinlein;0
 BScGM3;Globale Wirtschaft;Prof. Dr. Joachim Ahrens;0
-BScGM3;Fallstudien / Projektarbeit;Pro-City GmbH Göttingen - Prof. Dr. Ahrens, MAS-Analytics UG - Prof. Dr. Vollmar, Bio-Zentrale Naturprodukte GmbH - Prof. Dr. Voss, Göttinger Symphonie Orchester - Prof. Dr. Sierke, Regionales Demografie Netzwerk (ReDeNetz) - Prof. Dr. Mörstedt, Gemeinnütziger Tierschutzverein Herzenshunde von Feteni - Prof. Dr. Mörstedt, Deutsches Rotes Kreuz - Prof. Dr. Ahrens, Deloitte \& Touche GmbH - Prof. Dr. Albe;1
+BScGM3;Praxisprojekte/Fallstudien;Städtischer Auftraggeber - Prof. Dr. Riekhof, GIS AG Hannover - Prof. Dr. Schüle, Bäckerei Thiele - Prof. Dr. Riekhof, Ernst Neumärker GmbH \& Co. KG - Prof. Dr. Mörstedt, POCO Einrichtungsmärkte GmbH - Prof. Dr. Ahrens, Sartorius AG - Prof. Dr. Ahrens, ZE Zentrum für Entrepreneurship - Prof. Dr. Vollmar, YourCar GmbH, Göttingen - Prof. Dr. Vollmar, alto.Red GmbH - Prof. Dr. Sierke, Göttinger Filmnetzwerk e.V. - Prof. Dr. Sierke;1
 BScGM3;Englisch III;Robert Óbraonáin, Hiltraud Haindorff, Antje Menster;1
-BScGM3;2. Fremdsprache III;Chinesisch - Weihong Chen-Dieckmann, Spanisch Fortgeschrittene - Mónica Naranjo-Merboldt, Spanisch Anfänger - Heike Georges;1
+BScGM3;2. Fremdsprache III;Chinesisch - Weihong Chen-Dieckmann, Spanisch Fortgeschrittene - Mónica Naranjo-Merboldt, Spanisch - Heike Georges, Französisch - Heike Georges;1
 BScGM3;Soft Skills III;Michael Ballhause;0
 BScGM4;Controlling;Prof. Dr. Frank Albe;0
 BScGM4;Kostenrechnungssysteme;Prof. Dr. Frank Albe;0
@@ -57,19 +57,19 @@ BScGM5;Banking / Finance;Prof. Dr. Niels Olaf Angermüller;0
 BScGM5;International Accounting/Controlling;Prof. Dr. Andrejewski / Prof. Dr. Dusemond;0
 BScGM5;Entrepreneurship;Prof. Dr. Manfred Zilling / Prof. Dr. Bernhard Vollmar;0
 BScGM5;Industrielles Management;Prof. Dr. Bloech;0
-BScGM5;Englisch V;Frau Susan Schanz, Frau Marie Smith;1
+BScGM5;Englisch V;Hiltraud Haindorff, Herr Ekanayake;1
 BScGM5;Fremdsprache V;Chinesisch - Mingqiu Zhou, Spanisch - Heike Georges, Spanisch - Mónica Naranjo-Merboldt;1
 BScGM5;Soft Skills V, Gesprächs- und Verhandlungsführung;Björn Thullner;0
 BScPsy1;Historische Entwicklung der Psychologie;Prof. Dr. Michael Gutmann;0
 BScPsy1;Einführung in die Forschungsmethoden;Prof. Dr. Stephan Weibelzahl;0
 BScPsy1;Aktuelle Forschungsfelder der Psychologie;Prof. Dr. Susanne Ruhland;0
 BScPsy1;Statistik - Diskriptive Statistik;Prof. Dr. Monika Fleischhauer;0
-BScPsy1;Statistik - Wahrscheinlichkeitsrechnung;Prof. Dr. Stephan Weibelzahl;0
+BScPsy1;Statistik - Wahrscheinlichkeitstheorie;Prof. Dr. Stephan Weibelzahl;0
 BScPsy1;Statistik - Tutorium;Katharina Deistler;0
 BScPsy1;Wahrnehmung und Sprache;Prof. Dr. Dorit Wenke;0
 BScPsy1;Lernen und Gedächtnis;Prof. Dr. Dorit Wenke;0
-BScPsy1;Biopsychologische Grundlagen;Prof. Dr. Anja Lepach;0
-BScPsy1;Biologische Psychologie Vertiefung;Prof. Dr. Anja Lepach;0
+BScPsy1;Biopsychologische Grundlagen;Prof. Dr. Anja Lepach-Engelhardt;0
+BScPsy1;Biologische Psychologie Vertiefung;Prof. Dr. Anja Lepach-Engelhardt;0
 BScPsy1;Differentielle Psychologie - Theoretische Ansätze;Prof. Dr. Monika Fleischhauer;0
 BScPsy1;Differentielle Psychologie - Vertiefung;Prof. Dr. Monika Fleischhauer;0
 BScPsy2;Wirtschaftspolitik;Prof. Dr. Joachim Ahrens;0
@@ -77,7 +77,7 @@ BScPsy2;Statistik II - Testverfahren;Andreas Cordes;0
 BScPsy2;Statistik II - Computergestützte Datenanalyse;Andreas Cordes;0
 BScPsy2;Denken und Entscheiden;Prof. Dr. Dorit Wenke;0
 BScPsy2;Angewandte Entscheidungspsychologie;Prof. Dr. Dorit Wenke;0
-BScPsy2;Biologische Psychologie;Prof. Dr. Anja Lepach-Engelhardt;0
+BScPsy2;Biologische Psychologie;Prof. Dr. Anja Lepach-Engelhardt-Engelhardt;0
 BScPsy2;Differentielle Psychologie - Methoden und Intelligenz;Prof. Dr. Monika Fleischhauer;0
 BScPsy2;Differentielle Psychologie - Vertiefung;Prof. Dr. Monika Fleischhauer;0
 BScPsy2;Sozialpsychologie, Individuum und Soziale Welt;Prof. Dr. Frank Vogelgesang;0
@@ -87,12 +87,12 @@ BScPsy2;Alltagsverständnis von Ökonomie und Arbeitsmärkte;Prof. Dr. Stephan W
 BScPsy2;Wirtschaftspsychologie - Vertiefung;Prof. Dr. Stephan Weibelzahl;0
 BScPsy2;Ablauf einer empirischen Untersuchung, Techniken wissenschaftlichen Arbeitens;Prof. Dr. Dorit Wenke;0
 BScPsy2;Moderation, Präsentation und Schreiben;Prof. Dr. Dorit Wenke, Karen Weiske;0
-BScPsy2;Entwicklungspsychologie - kognitive, emotionale und soziale Entwicklung;Prof. Dr. Anja Lepach-Engelhardt;0
-BScPsy2;Entwicklungspsychologie - ausgewählte Bereiche der Entwicklung;Prof. Dr. Anja Lepach-Engelhardt;0
+BScPsy2;Entwicklungspsychologie - kognitive, emotionale und soziale Entwicklung;Prof. Dr. Anja Lepach-Engelhardt-Engelhardt;0
+BScPsy2;Entwicklungspsychologie - ausgewählte Bereiche der Entwicklung;Prof. Dr. Anja Lepach-Engelhardt-Engelhardt;0
 BScPsy3;Sozialpsychologie Interaktion und Gruppe;Prof. Dr. Frank Vogelgesang;0
 BScPsy3;Sozialpsychologische Vertiefung;Prof. Dr. Frank Vogelgesang;0
-BScPsy3;Entwicklungspsychologie - kognitive Entwicklung, Motivation, Persönlichkeit und Selbst;Prof. Dr. Anja Lepach-Engelhardt;0
-BScPsy3;Entwicklungspsychologie - ausgewählte Bereiche der Entwicklung;Prof. Dr. Anja Lepach-Engelhardt;0
+BScPsy3;Entwicklungspsychologie - kognitive Entwicklung, Motivation, Persönlichkeit und Selbst;Prof. Dr. Anja Lepach-Engelhardt-Engelhardt;0
+BScPsy3;Entwicklungspsychologie - ausgewählte Bereiche der Entwicklung;Prof. Dr. Anja Lepach-Engelhardt-Engelhardt;0
 BScPsy3;Differentielle Psychologie - Theoretische Ansätze;Prof. Dr. Monika Fleischhauer;0
 BScPsy3;Differentielle Psychologie - Vertiefung;Prof. Dr. Monika Fleischhauer;0
 BScPsy3;Grundlagen der Testtheorie;Christoph Ehrling;0
@@ -101,8 +101,8 @@ BScPsy3;Arbeitspsychologie;Prof. Dr. Frank Vogelgesang;0
 BScPsy3;Arbeitspsychologie - Übung;Prof. Dr. Frank Vogelgesang;0
 BScPsy3;Klinische Psychologie - Modelle und Grundlagen;Prof. Dr. Susanne Ruhland;0
 BScPsy3;Klinische Psychologie - Diagnostik;Prof. Dr. Susanne Ruhland;0
-BScPsy3;Einführung in die Themen der Pädagogsichen Psychologie;Prof. Dr. Anja Lepach-Engelhardt;0
-BScPsy3;Lernen und Lehren;Prof. Dr. Anja Lepach-Engelhardt;0
+BScPsy3;Einführung in die Themen der Pädagogsichen Psychologie;Prof. Dr. Anja Lepach-Engelhardt-Engelhardt;0
+BScPsy3;Lernen und Lehren;Prof. Dr. Anja Lepach-Engelhardt-Engelhardt;0
 BScPsy3;Einführung in die Gesundheitspsychologie;Prof. Dr. Michael Gutmann;0
 BScPsy3;Konzepte von Gesundheit und Krankheit;Prof. Dr. Michael Gutmann;0
 BScPsy3;Arbeitsrecht Fallbeispiele;Prof. Dr. Bernd Rohlfing;0
